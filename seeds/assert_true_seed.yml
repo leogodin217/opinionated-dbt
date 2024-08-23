@@ -1,0 +1,19 @@
+version: 2
+
+seeds:
+  - name: assert_true_seed
+    description: Seed that expects two rows to fail
+    data_tests: 
+      # Preconfigured seed expects no failures
+      - assert_true:
+          expression: ((revenue - cost) / cost = margin) = should_be_true 
+    config: 
+      meta: 
+        opinionated: 
+          grain:
+            - date
+            - account_id
+          extra_columns:
+            - subscription_plan
+            - company
+            - should_be_true

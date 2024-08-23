@@ -1,0 +1,7 @@
+date,account_id,subscription_plan,company,revenue,cost,margin,should_be_true
+2024-01-01,1,per unit,sherlock consulting,1200,1000,1,false
+2024-01-02,1,per unit,sherlock consulting,1100,1000,0.1,true
+2024-01-03,1,per unit,sherlock consulting,1000,1000,0,true
+2024-01-01,2,contract,joan investigations,1200,1000,0.2,true
+2024-01-02,2,contract,joan investigations,1100,1000,0.1,true
+2024-01-03,2,contract,joan investigations,1000,1000,1,false

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: assert_true_table
+    description: Used to test assert_true_macro 
+    config: 
+      meta: 
+        opinionated: 
+          grain:
+            - date
+            - customer_id
+          extra_columns:
+            - subscription_plan
+            - company
+            - should_be_true
+    data_tests:
+      - dbt_expectations.expect_table_columns_to_contain_set:
+          column_list: ['date', 'account_id', 'subscription_plan', 'company', 'should_be_true']
+      - dbt_expectations.expect_table_columns_to_not_contain_set:
+          column_list: ['revenue', 'cost', 'margin']
+         
+
+    
